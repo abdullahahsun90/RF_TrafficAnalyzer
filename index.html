@@ -323,6 +323,15 @@
                         const switchCmdId = parseInt(cols[7]);
                         const direction = parseInt(cols[2]);
 
+                        if(cols[5] === '255')
+                        {
+                            cols[5] = "N/A";
+                        }
+                        if(cols[6] === '65535')
+                        {
+                            cols[6] = "N/A";
+                        }
+
                         // Count Log IDs
                         if (logIdCounts.hasOwnProperty(logId)) {
                             logIdCounts[logId]++;
